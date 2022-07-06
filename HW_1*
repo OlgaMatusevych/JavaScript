@@ -1,0 +1,59 @@
+1. Написать скриптик, который сосчитает и выведет результат от возведения 2 в степень 10, начиная со степени 1
+
+ let a = 2
+ for( b = 1; b < 11; b ++ )
+ console.log(Math.pow(a, b))
+
+ 1*. Преобразовать 1 задачу в функцию, принимающую на вход степень, в которую будет возводиться число 2
+function res(b) {
+console.log(2 ** b)
+}
+res(2) // - любое число степине в которую надо возвести
+
+2. Написать скрипт, который выведет 5 строк в консоль таким образом, чтобы в первой строчке выводилось :), во второй :):) и так далее
+Пример в консоли:
+:)
+:):)
+:):):)
+:):):):)
+:):):):):)
+
+let a = '' - //  - это отмечано просто как строка
+for( let i = 0; i < 5; i ++ ){
+console.log(a += ':)' )
+}
+
+2*. Преобразовать 2 задачу в функцию, принимающую на вход строку, которая и будет выводиться в консоль (как в условии смайлик), а также количество строк для вывода e.g. function printSmile(stroka, numberOfRows)
+let a = ''
+function printSmile(stroka, numberOfRows) {
+   for( let i = 0; i < numberOfRows ; i ++ ){  
+      console.log( a += ':)' )
+}
+}
+printSmile(':)', 6)
+
+
+3**.  Написать функцию, которая принимает на вход слово. Задача функции посчитать и вывести в консоль, сколько в слове гласных, и сколько согласных букв.
+e.g. function getWordStructure(word)
+В консоли:
+Слово (word) состоит из  (число) гласных и (число) согласных букв
+
+Проверки: 'case', 'Case', 'Check-list'
+
+ let vowels = [ 'a', 'e', 'i', 'o', 'u', 'y']
+ let consonants = [ 'z', 'x', 'c', 'v', 'b', 'n', 'm', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'q', 'w', 'r', 't', 'p' ]
+ let vowCount = 0
+ let consCount = 0
+ 
+  function getWordStructure(word) {
+   
+   for ( let i = 0; i < word.length; i++) {
+   if (vowels.includes(word[i])) {
+      vowCount++
+   } else if (consonants.includes(word[i])) {
+      consCount++ 
+   }
+ }
+console.log('словo ' +  word + ' состоит из ' + vowCount + ' гласных ' + consCount + ' согласных букв ' )
+}
+getWordStructure('word')
